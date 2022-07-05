@@ -33,7 +33,6 @@ public class Formation {
     @OneToMany(mappedBy = "formation")
     private List<Appelcandidature> appelCandidature;
 
-
 }
 
 
