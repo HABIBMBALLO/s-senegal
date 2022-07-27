@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Collection;
 import java.util.List;
 
 import javax.persistence.*;
@@ -12,17 +13,14 @@ import javax.persistence.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "role")
 public class Role {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="role_id")
-    private int id;
-    @Column(name="role")
+    private Long id;
     private String role;
 
     @OneToMany(mappedBy = "role")
-    private List<User> users;
+    private Collection<User> users;
 
 }

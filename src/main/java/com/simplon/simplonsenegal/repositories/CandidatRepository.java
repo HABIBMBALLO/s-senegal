@@ -4,7 +4,10 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Optional;
+
 @Repository
 @RestController
 public interface CandidatRepository extends JpaRepository<Candidat, Long> {
+//    Optional<Candidat> getCandidat(long id);
 }

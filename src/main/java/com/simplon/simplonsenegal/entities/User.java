@@ -1,16 +1,18 @@
 package com.simplon.simplonsenegal.entities;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "user_id")
     private int user_id;
-
-    @Column(name = "login")
     private String login;
 
     @ManyToOne(fetch = FetchType.EAGER)

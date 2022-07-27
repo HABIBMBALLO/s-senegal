@@ -19,7 +19,7 @@ public class Candidat {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long idUser;
+    private Long id;
     private String username;
     private String prenom;
     private String nom;
